@@ -1,0 +1,3 @@
+create table dependent(
+    d_id int,d_name varchar2(50),d_age int,emp_id number references employee(e_id),primary key(emp_id,d_id)
+);
