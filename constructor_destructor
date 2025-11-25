@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+class Rectangle{
+    private:
+        int l;
+        int w;
+    public:
+        Rectangle()
+        {
+            l=5;
+            w=10;
+            cout<<"Constructor without parameters"<<endl;
+        }
+        Rectangle(int a)
+        {
+            l=a;
+            w=a;
+            cout<<"Constructor with single parameter"<<endl;
+        }
+        Rectangle(int le,int wi)
+        {
+            l=le;
+            w=wi;
+            cout<<"Constructor with Two parameters"<<endl;
+        }
+        int area()
+        {
+            return l*w;
+        }
+};
+int main()
+{
+    Rectangle r1;
+    Rectangle r2(17);
+    Rectangle r3(25,35);
+    cout<<"Rectangle r1 with area : "<<r1.area()<<endl;
+    cout<<"Rectangle r2 with area : "<<r2.area()<<endl;
+    cout<<"Rectangle r3 with area : "<<r3.area()<<endl;
+}
