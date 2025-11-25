@@ -1,0 +1,53 @@
+/*2. Access Specifiers and Their Scope
+Problem: Create a class Account with private balance, protected accountNumber, and public holderName. Show how to access each correctly.
+*/
+#include<bits/stdc++.h>
+using namespace std;
+class Account{
+    private:
+    float balance;
+    protected:
+    int account_no;
+    public:
+    string name;
+    void accno()
+    {
+        cout<<"Enter the account number: "<<endl;
+        cin>>account_no;
+    }
+    void balanceamount(double n)
+    {
+        cout<<"Your balance is: "<<endl;
+        balance=n;
+    }
+    // float amount()
+    // {
+    //     return balance;
+    // }
+    void uname(string s)
+    {
+        name=s;
+    }
+    void display()
+    {
+        cout<<"Account holder name is: "<<name<<endl;
+        cout<<"account number is: "<<account_no<<endl;
+        cout<<"Account balance is :"<<balance;
+    }
+
+    
+
+};
+int main()
+{
+    Account a;
+    cout<<"Enter the name of account holder :";
+    cin>>a.name;
+    a.accno();
+    a.balanceamount(32165321.245);
+    a.uname(a.name);
+    // a.amount();
+    a.display();
+    
+
+}
