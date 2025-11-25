@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+class Student{
+    private:
+        string name;
+        int age;
+    public:
+        Student(string s,int a)
+        {
+            name=s;
+            age=a;
+            cout<<"Value are assigned."<<endl;
+        }
+        Student(const Student &s)
+        {
+            name=s.name;
+            age=s.age;
+            cout<<"Values are copied."<<endl;
+        }
+        void display()
+        {
+            cout<<"Name: "<<name<<" and Age: "<<age<<endl;
+        }
+
+};
+int main()
+{
+    Student s("Santhosh",19);
+    Student j=s;
+    s.display();
+    j.display();
+}
