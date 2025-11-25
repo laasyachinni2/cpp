@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+class bankaccount
+{
+    private:
+    double balance;
+    public:
+    bankaccount(double b):balance(b){}
+    friend void auditaccount(bankaccount a);
+};
+void auditaccount(bankaccount a)
+{
+    cout<<"Audit acoount Balance:$"<<a.balance<<endl;
+}
+int main()
+{
+    bankaccount santhosh(500000.050);
+    auditaccount (santhosh);
+    return 0;
+}
