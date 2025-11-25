@@ -1,0 +1,31 @@
+/*1. Declaring Objects
+Problem: Create a class Student with roll number and name. Declare two objects and display their values using a member function.*/
+
+#include<bits/stdc++.h>
+using namespace std;
+class Student{
+    public:
+    string rollno;
+    string name;
+    void pupil(string id,string uname)
+    {
+        name=uname;
+        rollno=id;
+    }
+    void info()
+    {
+        cout<<"roll no is "<<rollno<<endl; 
+        cout<<"name is "<<name<<endl;
+    }
+};
+int main()
+{
+    Student s;
+    cout<<"Enter the name of student:";
+    cin>>s.name;
+    cout<<"Enter the roll no of student";
+    cin>>s.rollno;
+    s.pupil(s.rollno,s.name);
+    s.info();
+
+}
